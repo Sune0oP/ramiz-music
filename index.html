@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="myLogo-modified.png" alt="" class="logo">
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br>REAL<br>SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here to Listen</p>
+                <img src="play.png" alt="" id="icon">
+            </div>
+        </div>
+    </div>
+    
+    <audio src="song.mp3" id="mySong"></audio>
+
+        <footer>
+            <span>Created By <a href="https://www.instagram.com/cocainebadam/">Ramiz Khan</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+        </footer>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "pause.png";
+            }
+            else{
+                mySong.pause();
+                icon.src = "play.png";
+            }
+        }
+    </script>
+</body>
+</html>
